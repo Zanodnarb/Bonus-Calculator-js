@@ -75,3 +75,22 @@ function calculateBonus(employee) {
       //  Rating 5 = 10%
       bonusPercentage = .1;
     }
+    
+    if (employee.employeeNumber.length === 4) {
+      // IF employeeNumber is 4 digits
+      // +5% to BONUS
+      bonusPercentage += .05;
+    }
+    if (parseInt(employee.annualSalary) > 65000) {
+      // IF income > $65,000
+      // -1% to BONUS
+      bonusPercentage -= .01;
+    }
+    // CAP bonusPercentage at 13%
+    if (bonusPercentage > 0.13) {
+        bonusPercentage = 0.13;
+    } else if (bonusPercentage < 0) {
+        bonusPercentage = 0;
+    }
+    return bonusPercentage;
+    }
