@@ -57,3 +57,21 @@ function processEmployee(employee) {
     
       return processedEmployee;
     }
+
+function calculateBonus(employee) {
+    let bonusPercentage;
+  
+    
+    if (employee.reviewRating <= 2) {
+      //  <=2 -- No Bonus added
+      bonusPercentage = 0;
+    } else if (employee.reviewRating === 3) {
+      //  Rating 3 = 4%
+      bonusPercentage = .04;
+    } else if (employee.reviewRating === 4) {
+      //  Rating 4 = 6%
+      bonusPercentage = .06;
+    } else if (employee.reviewRating === 5) {
+      //  Rating 5 = 10%
+      bonusPercentage = .1;
+    }
