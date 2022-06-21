@@ -39,3 +39,21 @@ const employees = [
 
 // This is not a race. Everyone on your team should understand what is happening.
 // Ask questions when you don't.
+
+function processEmployee(employee) {
+    
+      let bonusPercentage = calculateBonus(employee);
+    
+      let totalBonus = Math.round(bonusPercentage * Number(employee.annualSalary));
+    
+      let totalCompensation = totalBonus + Number(employee.annualSalary);
+    
+      let processedEmployee = {
+        name: employee.name,
+        bonusPercentage: bonusPercentage,
+        totalBonus: totalBonus,
+        totalCompensation: totalCompensation
+      }
+    
+      return processedEmployee;
+    }
