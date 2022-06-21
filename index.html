@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bonus Calculator Object Challenge</title>
+    <script src="client.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1>Bonus Calculator Object Challenge!</h1>
+    <p>
+      <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        <label for="a">Employee Salary:</label>
+        <input type="number" name="a" value="0">
+        <label for="b">Bonus:</label>
+        <input type="number" name="b" value="0">
+        <output name="x" for="a b"></output>
+      </form>
+    </p>
+    <br>
+    <p>
+      <form oninput="store.value=parseInt(n1.value)+parseInt(n2.value)">
+      <input type="text" name="n1" placeholder="Enter your Salary:"><br>
+      <input type="text" name= "n2" placeholder="Enter your Bonus:">
+      <button id="calculate">Calculate</button><br>
+      <br>
+      Total Compensation is: <output name="store"></output>
+      </form>
+    </p>
+  </body>
+</html>
